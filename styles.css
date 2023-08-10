@@ -1,0 +1,22 @@
+html {
+    display: grid;
+    grid-template-columns: 25% 1fr 25%;
+}
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+    grid-column-start: 2;
+    text-align: center;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
