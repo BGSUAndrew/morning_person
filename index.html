@@ -7,6 +7,7 @@
         <p style="font-size: 80px; color: yellow;margin-bottom: 10px;">&#9788;</p>
         <h1>Welcome to Morning Person.</h1>
         <p>Let's get today off to a good start. Answer the prompts below</p>
+        <form>
         <section>
             <p>How did you sleep?</p>
             <input type="range" id="slider" name="slider" min="1" max="10" step="1" value="5" list="markers">
@@ -44,14 +45,25 @@
             </div>
             
             <div>
-                <input type="text" id="item1" name="item2" required minlength="4" maxlength="200" placeholder="Thing 2" />
+                <input type="text" id="item2" name="item2" required minlength="4" maxlength="200" placeholder="Thing 2" />
             </div>
         
             <div>
-                <input type="text" id="item1" name="item3" required minlength="4" maxlength="200" placeholder="Thing 3" />
+                <input type="text" id="item3" name="item3" required minlength="4" maxlength="200" placeholder="Thing 3" />
             </div>
-            
         </section>
+        <button onclick="submitButton()">Save</button>
+    </form>
+    <section>
+        <h2>Goals for the Day</h2>
+        <div id="goals">
+            <p id="goalone"></p>
+            <p id="goaltwo"></p>
+            <p id="goalthree"></p>
+        </div>
+    </section>
     </body>
-
+    <footer>
+        <script src="scripts.js"></script>
+    </footer>
 </html>

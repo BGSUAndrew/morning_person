@@ -20,3 +20,9 @@ body {
         opacity: 1;
      }
 }
+
+@media (max-width: 600px) {
+    html {
+        grid-template-columns: 10% 1fr 10%;
+    }
+  }
