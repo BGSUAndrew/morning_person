@@ -22,3 +22,15 @@ displayTwo.innerHTML = storedValueTwo;
 var storedValueThree = localStorage.getItem("itemThree");
 var displayThree = document.getElementById('goalthree');
 displayThree.innerHTML = storedValueThree;
+
+function waterSelection() {
+    if (document.getElementById('water_yes').checked) {
+        document.getElementById("water_result").style.display="block";
+        document.getElementById("waterYes").style.display="block";
+        document.getElementById("waterNo").style.display="none";
+    } else if(document.getElementById('water_no').checked) {
+        document.getElementById('water_result').style.display="block";
+        document.getElementById("waterYes").style.display="none";
+        document.getElementById("waterNo").style.display="block";
+    }
+}

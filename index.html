@@ -26,10 +26,18 @@
         </section>
         <section>
             <p>Have you drank water yet this morning?</p>
-            <input type="radio" id="water_yes" name="water">
+            <input onclick="waterSelection()" type="radio" id="water_yes" name="water">
             <label for="yes">Yes</label>
-            <input type="radio" id="water_no" name="water">
+            <input onclick="waterSelection()" type="radio" id="water_no" name="water">
             <label for="no">No</label>
+        </section>
+        <section class="alert_box" id="water_result">
+            <div id="waterYes">
+                <p>Well done. Starting your day with water in the morning has <a href="https://www.healthline.com/nutrition/drinking-water-in-the-morning" target="_window">positive health effects</a></p>
+            </div>
+            <div id="waterNo">
+                <p>That's alright! Drink some when you get the chance.</p>
+            </div>
         </section>
         <section>
             <p>Have you had something to eat?</p>
