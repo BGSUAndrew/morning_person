@@ -5,23 +5,26 @@ function submitButton() {
     console.log(goalone);
     console.log(goaltwo);
     console.log(goalthree);
-    localStorage.setItem("itemOne",goalone);
-    localStorage.setItem("itemTwo",goaltwo);
-    localStorage.setItem("itemThree",goalthree);
+    sessionStorage.setItem("itemOne",goalone);
+    sessionStorage.setItem("itemTwo",goaltwo);
+    sessionStorage.setItem("itemThree",goalthree);
 
 }
 
-var storedValue = localStorage.getItem("itemOne");
+var storedValue = sessionStorage.getItem("itemOne");
 var displayOne = document.getElementById('goalone');
 displayOne.innerHTML = storedValue;
 
-var storedValueTwo = localStorage.getItem("itemTwo");
+var storedValueTwo = sessionStorage.getItem("itemTwo");
 var displayTwo = document.getElementById('goaltwo');
 displayTwo.innerHTML = storedValueTwo;
 
-var storedValueThree = localStorage.getItem("itemThree");
+var storedValueThree = sessionStorage.getItem("itemThree");
 var displayThree = document.getElementById('goalthree');
 displayThree.innerHTML = storedValueThree;
+
+window.alert(storedValue);
+
 
 function waterSelection() {
     if (document.getElementById('water_yes').checked) {
