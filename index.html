@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MorningPerson.App</title>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -10,7 +12,7 @@
         <form>
         <section>
             <p class="prompt">How did you sleep?</p>
-            <input type="range" id="slider" name="slider" min="1" max="10" step="1" value="5" list="markers">
+            <input label="sleep slider" type="range" id="slider" name="slider" min="1" max="10" step="1" value="5" list="markers">
             <datalist id="markers">
                 <option value="1" label="1"></option>
                 <option value="2" label="2"></option>
@@ -26,9 +28,9 @@
         </section>
         <section>
             <p class="prompt">Have you drank water yet this morning?</p>
-            <input onclick="waterSelection()" type="radio" id="water_yes" name="water">
+            <input label="Yes I drank water" onclick="waterSelection()" type="radio" id="water_yes" name="water">
             <label for="yes">Yes</label>
-            <input onclick="waterSelection()" type="radio" id="water_no" name="water">
+            <input label="No I did not drink water" onclick="waterSelection()" type="radio" id="water_no" name="water">
             <label for="no">No</label>
         </section>
         <section class="alert_box" id="water_result">
@@ -41,9 +43,9 @@
         </section>
         <section>
             <p class="prompt">Have you had something to eat?</p>
-            <input type="radio" id="food_yes" name="food">
+            <input label="Yes I ate food" type="radio" id="food_yes" name="food">
             <label for="yes">Yes</label>
-            <input type="radio" id="food_no" name="food">
+            <input label="No I did not eat food" type="radio" id="food_no" name="food">
             <label for="no">No</label>
         </section>
         <section>
