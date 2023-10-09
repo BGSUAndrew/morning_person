@@ -23,7 +23,7 @@ h1 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .alert_box {
@@ -34,6 +34,7 @@ p {
 
 .prompt {
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 #item1, #item2, #item3 {
