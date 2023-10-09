@@ -23,8 +23,6 @@ var storedValueThree = sessionStorage.getItem("itemThree");
 var displayThree = document.getElementById('goalthree');
 displayThree.innerHTML = storedValueThree;
 
-window.alert(storedValue);
-
 
 function waterSelection() {
     if (document.getElementById('water_yes').checked) {

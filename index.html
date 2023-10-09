@@ -5,11 +5,11 @@
     </head>
     <body>
         <p style="font-size: 80px; color: yellow;margin-bottom: 10px;">&#9788;</p>
-        <h1>Welcome to Morning Person.</h1>
+        <h1>Welcome to Morning Person</h1>
         <p>Let's get today off to a good start. Answer the prompts below</p>
         <form>
         <section>
-            <p>How did you sleep?</p>
+            <p class="prompt">How did you sleep?</p>
             <input type="range" id="slider" name="slider" min="1" max="10" step="1" value="5" list="markers">
             <datalist id="markers">
                 <option value="1" label="1"></option>
@@ -25,7 +25,7 @@
             </datalist>
         </section>
         <section>
-            <p>Have you drank water yet this morning?</p>
+            <p class="prompt">Have you drank water yet this morning?</p>
             <input onclick="waterSelection()" type="radio" id="water_yes" name="water">
             <label for="yes">Yes</label>
             <input onclick="waterSelection()" type="radio" id="water_no" name="water">
@@ -40,24 +40,26 @@
             </div>
         </section>
         <section>
-            <p>Have you had something to eat?</p>
+            <p class="prompt">Have you had something to eat?</p>
             <input type="radio" id="food_yes" name="food">
             <label for="yes">Yes</label>
             <input type="radio" id="food_no" name="food">
             <label for="no">No</label>
         </section>
         <section>
-            <p>Let's list 3 things you'd like to accomplish today.</p>
+            <p class="prompt">Let's list 3 things you'd like to accomplish today.</p>
+            <p>Tip: Keep these small and manageable. The character limit in each box is 200 characters.</p>
+            <p>Another tip: When you click submit, the page will refresh and your goals will no longer appear. To ready why, <a href="#storage">click here</a>.</p>
             <div>
-                <input type="text" id="item1" name="item1" required minlength="4" maxlength="200" placeholder="Thing 1" />
+                <input type="text" id="item1" name="item1" required minlength="4" maxlength="200" placeholder="Item 1" />
             </div>
             
             <div>
-                <input type="text" id="item2" name="item2" required minlength="4" maxlength="200" placeholder="Thing 2" />
+                <input type="text" id="item2" name="item2" required minlength="4" maxlength="200" placeholder="Item 2" />
             </div>
         
             <div>
-                <input type="text" id="item3" name="item3" required minlength="4" maxlength="200" placeholder="Thing 3" />
+                <input type="text" id="item3" name="item3" required minlength="4" maxlength="200" placeholder="Item 3" />
             </div>
         </section>
         <button onclick="submitButton()">Save</button>
@@ -70,6 +72,10 @@
             <p id="goalthree"></p>
         </div>
     </section>
+    <div id="storage">
+        <caption>I recognize this part may put people to sleep but in the interest of communicaiton, I wanted to explain why goals are not currently saving. My goal is that your goals save in the browser for 24 hours. If I set that to run that way now, you'll have to manually clear your browser storage each day and that's no fun. So until that update comes in, goals will not save on the page.</caption>
+        <caption>Consider your goals for each day. It's still worth writing them down, to give it that mindful attention. </caption>
+    </div>
     </body>
     <footer>
         <script src="scripts.js"></script>
