@@ -49,6 +49,12 @@ p {
     font-size: 1rem;
 }
 
+#app {
+    color: red;
+    list-style-type: none;
+}
+
+/*
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -57,6 +63,7 @@ p {
         opacity: 1;
      }
 }
+*/
 
 @media (max-width: 700px) {
     html {

@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MorningPerson.App</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
         <p style="font-size: 80px; color: yellow;margin-bottom: 10px;">&#9788;</p>
@@ -74,10 +75,30 @@
             <p id="goalthree"></p>
         </div>
     </section>
+    <div id="app">
+        <li v-for="item in items" :key="item.id">
+            {{ item.message }}
+          </li>
+          <p>Add Items to list: {{ addItems }}</p>
+            <input v-model="addItems" placeholder="edit me" />
+    </div>
+    <script>
+        const { createApp } = Vue
+      
+        createApp({
+            data() {
+                return {
+                    items: [{ message: 'Exercise' }, { message: 'Foo' }],
+                    addItems: ''
+                    }
+                }
+        }).mount('#app')
+      </script>
     <div id="storage">
         <caption>I recognize this part may put people to sleep but in the interest of communicaiton, I wanted to explain why goals are not currently saving. My goal is that your goals save in the browser for 24 hours. If I set that to run that way now, you'll have to manually clear your browser storage each day and that's no fun. So until that update comes in, goals will not save on the page.</caption>
         <caption>Consider your goals for each day. It's still worth writing them down, to give it that mindful attention. </caption>
     </div>
+
     </body>
     <footer>
         <script src="scripts.js"></script>
